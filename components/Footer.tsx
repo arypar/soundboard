@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import { ModeToggle } from "@/components/theme-toggle";
 
 const Footer: React.FC = () => {
   return (

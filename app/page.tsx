@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { ModeToggle } from "@/components/theme-toggle";
 import NavigationHeader from "@/components/NavigationHeader";
 import GridButtons from "@/components/gridButtons";
 import Footer from "@/components/Footer";
