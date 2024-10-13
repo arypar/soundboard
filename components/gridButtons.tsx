@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
-
+import { useToast } from "@/hooks/use-toast"
 const GridButtons = () => {
-   
+    const { toast } = useToast()
     const buttonRef = useRef(null);
 
     useEffect(() => {
@@ -13,6 +13,9 @@ const GridButtons = () => {
             const audio = new Audio(`/audios/audio${String(event.key)}.mp3`);
             audio.volume = 1;
             audio.play();
+            toast({
+              title: "Playing Audio " + String(event.key),
+            })
             
           }
         }
@@ -31,6 +34,9 @@ const GridButtons = () => {
         const audio = new Audio(`/audios/audio${index}.mp3`);
         audio.volume = 1;
         audio.play();
+        toast({
+          title: "Playing Audio " + String(index),
+        })
     };
 
 
